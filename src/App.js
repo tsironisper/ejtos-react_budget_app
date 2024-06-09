@@ -11,6 +11,20 @@ import CurrencyDropdown from "./components/CurrencyDropdown";
 const App = () => {
     return (
         <AppProvider>
+         <div className="alert alert-primary">
+      <label htmlFor="currency">Currency:</label>
+      <select
+        id="currency"
+        value={selectedCurrency}
+        onChange={handleCurrencyChange}
+      >
+        <option value="$">$ Dollar</option>
+        <option value="£">£ Pound</option>
+        <option value="€">€ Euro</option>
+        <option value="₹">₹ Rupee</option>
+        {/* Add more currency options as needed */}
+      </select>
+    </div>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
                 <div className='row mt-3'>
